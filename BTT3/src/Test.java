@@ -1,18 +1,19 @@
 import java.util.ArrayList;
 
-//Yêu cầu 3: Xây dựng lớp Test để tạo đối tượng từ lớp Sach.
 public class Test {
     public static void main(String[] args){
-        Sach Sachs1 = new Sach(  "001",  "Lập trình cơ bản với C", "HTML", 1990,  4);
-        Sach Sachs2 = new Sach("002", "Triết học Mác-LêNin", "Lê Phạm Đức Quang", 2007, 5);
-
-        //Yêu cầu 4: Tạo và quản lý danh sách Sach bằng ArrayList
-        ArrayList<Sach> Sach = new ArrayList<Sach>();
-        Sach.add(Sachs1);
-        Sach.add(Sachs2);
-        for(int i=0; i<Sach.size(); i++){
+        Sach sach1 = new Sach("001", "Lap trinh co ban voi C", "HTML", 2020, 5);
+        Sach sach2 = new Sach("002", "Triet hoc Mac-Lenin", "Lê Phạm Đức Quang", 1990, 3);
+        ArrayList<Sach> danhSachSach = new ArrayList<Sach>();
+        danhSachSach.add(sach1);
+        danhSachSach.add(sach2);
+        for(int i = 0; i < danhSachSach.size(); i++){
             System.out.println("Thong tin sach thu " + (i + 1));
-            Sach.get(i).hienThiThongTin();
+            System.out.println("Ma sach: " + danhSachSach.get(i).getMaSach());
+            System.out.println("Tieu de: " + danhSachSach.get(i).getTieuDe());
+            System.out.println("Tac gia: " + danhSachSach.get(i).getTacGia());
+            System.out.println("Nam xuat ban: " + danhSachSach.get(i).getNamXuatBan());
+            System.out.println("So luong: " + danhSachSach.get(i).getSoLuong());
         }
     }
 }
